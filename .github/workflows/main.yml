@@ -10,6 +10,6 @@ jobs:
     - name: Install LLVM and Clang
       uses: KyleMayes/install-llvm-action@v1.7.0
       with:
-        platform: x64
+        platform: win64
     - name: clang version check
       run: clang++ --version
