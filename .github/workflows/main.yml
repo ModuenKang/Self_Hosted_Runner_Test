@@ -1,0 +1,13 @@
+name: Modi_Workflow_1
+
+on: [ push, pull_request ]
+jobs:
+  myBuild:
+    runs-on: self-hosted
+    steps:
+    - name: setup-actions
+      uses: actions/checkout@v2
+    - name: Install Clang
+      uses: egor-tensin/setup-clang@v1.4
+    - name: clang version check
+      run: clang++ --version
