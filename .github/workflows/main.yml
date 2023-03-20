@@ -1,6 +1,8 @@
 name: Workflow_1
 
 on: [ push, pull_request ]
+env:
+  pwsh: PowerShell
 jobs:
   MyBuild:
     runs-on: self-hosted
@@ -8,7 +10,7 @@ jobs:
     - name: setup-actions
       uses: actions/checkout@v3
     - name: PowerShell test
-      run: PowerShell -help
+      run: pwsh -help
     - name: PowerShell script
       uses: Amadevus/pwsh-script@v2.0.3
     - name: Set up Clang
