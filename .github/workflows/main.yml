@@ -9,8 +9,6 @@ jobs:
     steps:
     - name: setup-actions
       uses: actions/checkout@v3
-    - name: PowerShell test
-      run: $pwsh -help
     - name: PowerShell script
       uses: Amadevus/pwsh-script@v2.0.3
     - name: Set up Clang
