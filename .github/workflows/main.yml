@@ -7,12 +7,9 @@ jobs:
     steps:
     - name: setup-actions
       uses: actions/checkout@v2
-    - name: Run Azure PowerShell script
-      uses: azure/powershell@v1
-      with:
-        inlineScript: |
-          Get-AzVM -ResourceGroupName "ResourceGroup11"
-        azPSVersion: "latest"
+    - name: Love
+      shell: pwsh
+      run: echo "LOVE"
     - name: Set up Clang
       uses: egor-tensin/setup-clang@v1
       with:
