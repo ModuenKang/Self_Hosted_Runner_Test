@@ -13,4 +13,4 @@ jobs:
         version: latest
         platform: x64
     - name: clang version check
-      run: clang++ --version
+      run: clang++ --versiona
