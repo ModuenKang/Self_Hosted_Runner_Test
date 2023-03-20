@@ -9,17 +9,15 @@ jobs:
     steps:
     - name: setup-actions
       uses: actions/checkout@v3
-    - name: Install PowerShell Core
+    - name: setup-node
       uses: actions/setup-node@v2
       with:
         node-version: '16.x'
+    - name : Istall PowerShell
       run: |
         sudo apt-get update
         sudo apt-get install -y powershell
     - name: Add PowerShell Core to PATH
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16.x'
       run: |
         echo "export PATH=\$PATH:/usr/bin/pwsh" >> $GITHUB_ENV
     - name: Set up Clang
