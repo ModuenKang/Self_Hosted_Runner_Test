@@ -9,17 +9,11 @@ jobs:
     steps:
     - name: setup-actions
       uses: actions/checkout@v3
-    - name: setup-node
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16.x'
-    - name: Add PowerShell Core to PATH
+    - name: Install PowerShell Core
       run: |
-        echo "export PATH=\$PATH:/usr/bin/pwsh" >> $GITHUB_ENV
+        & 'C:\Program Files\PowerShell\7\pwsh.exe' -Command "& {&'Invoke-WebRequest' -Uri https://aka.ms/install-powershell.ps1 -UseBasicParsing | & 'Invoke-Expression'}"
     - name: Set up Clang
-      uses: egor-tensin/setup-clang@v1
-      with:
-        version: latest
-        platform: x64
+      run: |
+        choco install llvm
     - name: clang version check
       run: clang++ --version
