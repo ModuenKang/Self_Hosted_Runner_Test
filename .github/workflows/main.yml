@@ -1,8 +1,6 @@
 name: Workflow_1
 
 on: [ push, pull_request ]
-env:
-  pwsh: PowerShell
 jobs:
   MyBuild:
     runs-on: self-hosted
