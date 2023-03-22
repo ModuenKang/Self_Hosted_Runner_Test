@@ -7,8 +7,6 @@ jobs:
     steps:
     - name: setup-actions
       uses: actions/checkout@v3
-    - name: Chocolatey Action
-      uses: crazy-max/ghaction-chocolatey@v2.1.0
     - name: Set up Clang
       uses: egor-tensin/setup-clang@v1.4
       with:
