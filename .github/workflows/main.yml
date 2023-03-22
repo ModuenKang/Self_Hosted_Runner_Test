@@ -7,10 +7,5 @@ jobs:
     steps:
     - name: setup-actions
       uses: actions/checkout@v3
-    - name: Set up Clang
-      uses: egor-tensin/setup-clang@v1.4
-      with:
-        version: latest
-        platform: x64
     - name: clang version check
       run: clang++ --version
